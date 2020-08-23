@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/animacao_implicita.dart';
 import 'package:flutterdemo/page_route_anim.dart';
 
 void main(){
   runApp(MaterialApp(
-    home: FirstScreen(),
+    home: AnimacaoImplicita(),
     debugShowCheckedModeBanner: false,
   ));
 }
@@ -33,11 +34,7 @@ class _FirstScreenState extends State<FirstScreen> {
           ),
           onPressed: (){
             Navigator.push(context,
-              PageRouteAnim(widget: SecondScreen(),
-                  curve: Curves.elasticOut,
-                  durationSeconds: 1,
-                  alignment: Alignment.bottomCenter,
-                  scaleTransition: false)
+              PageRouteAnim(widget: SecondScreen())
              );
           },
         ),
